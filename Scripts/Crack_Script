@@ -1,14 +1,11 @@
-# 原文来自https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_Script，我删除了『蜗牛睡眠』的解锁脚本
+# 此文件原文主要来自https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_Script，有删减，收集自其他地方的都标注了源文件出处。
 
-hostname = ap?.bilibili.com,mall.zuoyebang.com,apivip.zybang.com,miniapp.elecredit.com,59.110.149.231,129.211.156.213,*.dushu365.com,*.xiangha.com,zths.szy.cn,book.haitunwallet.com,mobile.flightradar24.com,panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, biz.caiyunapp.com, dxy.com, tagit.hyhuo.com,vira.llsapp.com,i.xinyulib.com.cn,luping.cushuikeji.cn,*.gotokeep.com,awvp.aoscdn.com,gw.aoscdn.com,*.intsig.net,bt.flashdown365.com,api.wscdn.vip, aiqicha.baidu.com, dj.palmestore.com,*.wallpaperscraft.com,music.snailsleep.net,*.xiaozujian.com,cn.pornhubpremium.com,wallpaper.soutushenqi.com,xluser-ssl.xunlei.com,restore-access.indream.app,dq.xiangha.com,apiios_dq.xiangha.com,license.enpass.io,xyst.yuanfudao.com,rdp.duetdisplay.com, *lrts*, *.x-storm.com
+hostname = ap?.bilibili.com,mall.zuoyebang.com,apivip.zybang.com,miniapp.elecredit.com,59.110.149.231,129.211.156.213,*.dushu365.com,*.xiangha.com,zths.szy.cn,book.haitunwallet.com,mobile.flightradar24.com,panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, biz.caiyunapp.com, dxy.com, tagit.hyhuo.com,vira.llsapp.com,i.xinyulib.com.cn,luping.cushuikeji.cn,*.gotokeep.com,awvp.aoscdn.com,gw.aoscdn.com,*.intsig.net,bt.flashdown365.com,api.wscdn.vip, aiqicha.baidu.com, dj.palmestore.com,*.wallpaperscraft.com,music.snailsleep.net,*.xiaozujian.com,cn.pornhubpremium.com,wallpaper.soutushenqi.com,xluser-ssl.xunlei.com,restore-access.indream.app,dq.xiangha.com,apiios_dq.xiangha.com,license.enpass.io,xyst.yuanfudao.com,rdp.duetdisplay.com, *lrts*, *.x-storm.com, *.kuwo.cn, *.lrts.me, aiqicha.baidu.com, b2baifanfan.baidu.com, *.mgtv.com
 
 #JS
 # 微信公众号
 #^https:\/\/mp\.weixin\.qq\.com\/mp\/(getappmsgext|getappmsgad) url script-response-body https://raw.githubusercontent.com/iepngs/Script/master/weixin/ad.js
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/(getappmsgext|getappmsgad) url response-body "advertisement_num":\d,"advertisement_info":\[.+\], response-body "advertisement_num":0,"advertisement_info":[],
-
-# 陆琪故事
-# ^https:\/\/www\.luqijianggushi\.com\/api\/v2\/user\/get url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/luqi.js
 
 # workingcopy
 ;^https:\/\/education\.github\.com\/api\/user$ url script-response-body JS/workingcopy.js
@@ -24,11 +21,6 @@ hostname = ap?.bilibili.com,mall.zuoyebang.com,apivip.zybang.com,miniapp.elecred
 # JD Price
 ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
 
-
-#faceapp
-^https:\/\/api\.faceapp\.io(.*)\/api\/v.*\/auth\/user\/credentials url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/faceapp.js
-
-
 #𝘽𝙞𝙡𝙞_𝘼𝙪𝙩𝙤_𝙍𝙚𝙜𝙞𝙤𝙣𝙨
 ;^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 #可选, 适用于搜索指定地区的番剧
@@ -37,9 +29,6 @@ hostname = ap?.bilibili.com,mall.zuoyebang.com,apivip.zybang.com,miniapp.elecred
 
 #解除TestFlight区域限制
 ;^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ url script-request-body https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
-
-#我奥篮球 解锁付费回放及下载
-http://api.woaoo.net/.+ url script-response-body https://raw.githubusercontent.com/photonmang/quantumultX/master/JS/walq.js
 
 #企信通小程序
 ^https://miniapp.elecredit.com/ucenter_info/ url script-response-body https://raw.githubusercontent.com/Alex0510/Eric/Alex0510/surge/surge/Script/qxt.js
@@ -87,28 +76,9 @@ http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://raw.gi
 #^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/LiuLiShuo-YueDu.js
 ^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$ url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/llsyd.js
 
-# > SaveFile下载限制
-^https?:\/\/raw\.githubusercontent\.com\/koanapple\/lock_checker\/main\/ConfigSaveFrom\.json$ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/SaveFile.js
-
-# > 新语听书解锁会员
-^https?:\/\/i\.xinyulib\.com\.cn\/api\/querytoken.+ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/XinYuLibraryProCrack.js
-
-# 录屏大师解锁会员
-^http?:\/\/luping\.cushuikeji\.cn\/api\/v1\.user\/info url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/RecordScreenProCrack.js
-
-
-# 傲软抠图解锁会员
-#^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$ url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt.js
-#^https:\/\/awvp\.aoscdn\.com\/base\/vip\/client\/authorizations url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/arqt.js
-https://awvp.aoscdn.com/base/vip/v2/vips url script-response-body https://raw.githubusercontent.com/ddgksf2013/MoYu/master/apowersoft.js
-# 傲软扫描+解锁VIP  傲软PDF编辑+解锁VIP
-^https:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/arpdf.js
-# 傲软投屏-+解锁VIP
-^https:\/\/awvp\.aoscdn\.com\/base\/vip\/client\/authorizations url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/artp.js
-
-
 # 扫描全能王
 ^https:\/\/(api|api-cs|api-cs-cn)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js
+
 #扫描全能王-手机扫描仪+解锁VIP
 ;^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/smqnw.js
 
@@ -145,15 +115,8 @@ https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo url script-respon
 #Duet Unlock
 #^https:\/\/rdp\.duetdisplay\.com\/v1\/users\/validateReceipt$ url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Duet/duet.js
 
-# ✅ 酷我音乐(会员共享)[vip至2023-05-07]
-^https?:\/\/.*(kuwo|lrts).*(music\.pay\?ne|\/a\.p|v\d\/api\/(user\/in|pay\/vi)|\w{3}\/v\d\/user\/vi|\w{3}\/spi\/ms|\w{3}\/v\d\/the|\w{3}\/enc\/use) url script-response-body https://github.com/ddgksf2013/dev/raw/main/KuWoMusicProCrack.js
-^https?:\/\/.*(kuwo|lrts).*(music\.pay\?ui) url script-request-header https://github.com/ddgksf2013/dev/raw/main/KuWoMusicProCrack.js
-
-# ✅ Flightradar24
-^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) url script-echo-response https://github.com/ddgksf2013/dev/raw/main/flightradar24.js
-
-# ✅ FILEBALL挂载网盘
-^http://(aliyun|quark|pikpak)\.example\.com url script-analyze-echo-response https://raw.githubusercontent.com/hhlass/qx_script/main/qx_pan.js
+# ✅ 酷我音乐（来自https://github.com/I-am-R-E/Functional-Store-Hub/blob/Master/KuWoMusic/KuWoMusic.QuantumultX.snippet）
+^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).* url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kw.js
 
 # ✅ 获取StormSnifferHeader
 ^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/.+$ url script-request-header https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferHeader.js
@@ -162,3 +125,22 @@ https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo url script-respon
 
 # > kuake
 ^https?:\/\/open-cms-api\.uc\.cn\/open-cms url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/quark.js
+
+# 爱企查（来自https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/QuantumultX/Rewrite/Aiinquire_crack.snippet）
+^https:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum url reject-200
+^https?:\/\/aiqicha\.baidu\.com\/usercenter\/getvipinfoajax url script-request-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Aiinquire/Aiinquire_crack.js
+
+# 芒果TV（来自https://raw.githubusercontent.com/WeiRen0/Scripts/main/MGTV.js）
+^http[s]?:\/\/mobile\.api\.mgtv\.com\/v[0-9]\/(playlist|video\/album|video\/relative|video\/list).*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/MGTK.js
+^http[s]?:\/\/.*mgtv\.com/(client\/dynamic_entry|v8\/video\/getSource|GetUserInfo|v3\/module\/list|credits\/url).*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/MGTV.js
+^https?:\/\/nuc\.api\.mgtv.com\/Logout url reject-200
+^https?:\/\/pcvideoyd\.titan\.mgtv\.com\/pb\/ url reject-img
+^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/ url reject-200
+^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/package\.json url reject-200
+^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/server_bidding\/pre_fetch\/ url reject-200
+&src\=mgtv&suuid\=.*&testversion\=&ticket\=[A-Z0-9]{32} url 302 &src=mgtv&testversion=&ticket=44C417517F6B34B9AA7903C0A5650483
+^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/stats\/batch\/ url reject-200
+^https?:\/\/mob\.bz\.mgtv\.com\/odin\/c1\/channel\/ads\?_ url reject-200
+^https?:\/\/mobile\.da\.mgtv\.com\/json\/app\/bdboot url reject-200
+^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\?_support url reject-200
+^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/ url reject-200
