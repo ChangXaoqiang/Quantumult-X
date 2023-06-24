@@ -18,8 +18,6 @@ hostname = ap?.bilibili.com,mall.zuoyebang.com,apivip.zybang.com,miniapp.elecred
 
 # JD 去广告
 ;^https?://api\.m\.jd\.com/client\.action\?functionId=(start|myOrderInfo|orderTrackBusiness) url script-response-body https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/JDAdRemove.js
-# JD Price
-^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
 
 #𝘽𝙞𝙡𝙞_𝘼𝙪𝙩𝙤_𝙍𝙚𝙜𝙞𝙤𝙣𝙨
 ;^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
