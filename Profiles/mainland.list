@@ -29,6 +29,10 @@ host-keyword, api-adservices.apple.com,大陆服务
 host-keyword, ls.apple.com,大陆服务
 host-keyword, gsa.apple.com,大陆服务
 host-keyword, ess.apple.com,大陆服务
+host, location.apple.com,大陆服务
+host, maps.apple.com,大陆服务
+host, gspe35-ssl.ls.apple.com,大陆服务
+host, traffic.apple.com,大陆服务
 
 #TestFlight 服务(经过实测,Stash\Surge 无须添加此规则)
 host-suffix, testflightapp.com, 大陆服务
