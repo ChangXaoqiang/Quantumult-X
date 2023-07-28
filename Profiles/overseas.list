@@ -47,6 +47,19 @@ DOMAIN-SUFFIX,openaicom.imgix.net,海外服务
 DOMAIN-SUFFIX,openaicomproductionae4b.blob.core.windows.net,海外服务
 DOMAIN-SUFFIX,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,海外服务
 DOMAIN-KEYWORD,openai,海外服务
+HOST-SUFFIX,ai.com,海外服务
+HOST-SUFFIX,auth0.com,海外服务
+HOST-SUFFIX,challenges.cloudflare.com,海外服务
+HOST-SUFFIX,client-api.arkoselabs.com,海外服务
+HOST-SUFFIX,events.statsigapi.net,海外服务
+HOST-SUFFIX,featuregates.org,海外服务
+HOST-SUFFIX,identrust.com,海外服务
+HOST-SUFFIX,intercom.io,海外服务
+HOST-SUFFIX,intercomcdn.com,海外服务
+HOST-SUFFIX,poe.com,海外服务
+HOST-SUFFIX,sentry.io,海外服务
+HOST-SUFFIX,stripe.com,海外服务
+HOST-KEYWORD,openai,海外服务
 
 # > Line
 HOST-SUFFIX,lin.ee,海外服务
